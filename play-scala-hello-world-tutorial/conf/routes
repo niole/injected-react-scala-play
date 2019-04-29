@@ -5,7 +5,6 @@
 
 # An example controller showing a sample home page
 GET     /:selectedTab                                   controllers.HomeController.index(selectedTab: String)
-GET     /explore                            controllers.HomeController.explore
 
 
 # Map static resources from the /public folder to the /assets URL path

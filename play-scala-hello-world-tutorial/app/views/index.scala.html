@@ -2,15 +2,13 @@
 
 @main("Welcome") {
       @defining(play.core.PlayVersion.current) { version =>
-            <section id="content">
-                  STUFF
-                  <div id="mainview">
-                        <script>
-                              Components.mount('MainView', { selectedTab: "@selectedTab" }, document.getElementById("mainview"));
-                        </script>
-                  </div>
+            <h1>
+                  This is in play
+            </h1>
+            <div id="mainview">
                   <script>
-                  <p>Now, let's <a href="@routes.HomeController.explore">explore the tutorial Play application</a>.</p>
-            </section>
+                        Components.mount('MainView', { selectedTab: "@selectedTab" }, document.getElementById("mainview"));
+                  </script>
+            </div>
       }
 }

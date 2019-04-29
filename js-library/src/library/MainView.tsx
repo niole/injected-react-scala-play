@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { Tabs } from 'antd';
+import { Alert, Breadcrumb, Menu, Tabs, Layout } from 'antd';
 
+const {
+  Header, Footer, Sider, Content,
+} = Layout;
 const TabPane = Tabs.TabPane;
 
 const onTabSelect = (key: string) => window.location.href = `/${key}`;
@@ -10,11 +13,14 @@ type Props = {
 };
 
 const MainView: React.SFC<Props> = props =>  (
-  <Tabs defaultActiveKey={props.selectedTab} onChange={onTabSelect}>
-    <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-    <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
-    <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
-  </Tabs>
+  <Layout className="layout">
+    <Content style={{ padding: '0 50px' }}>
+      <Tabs defaultActiveKey={props.selectedTab} onChange={onTabSelect}>
+        <TabPane tab="This is a tab" key="1"><Alert message="This is a tab" /></TabPane>
+        <TabPane tab="another tab" key="2"><Alert message="This is another tab" /></TabPane>
+      </Tabs>
+    </Content>
+  </Layout>
 );
 
 export default MainView;
