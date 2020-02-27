@@ -27,3 +27,5 @@ Our reverse proxy setup is not generalizable or elegant. It is made specifically
 cd reverse-proxy && docker build -t reverseproxy . && docker-compose up -d
 ```
 Open your browser at localhost:8080/1. You are looking at the scala play application, but the tabs are a react component that is defined in `js-library`.
+
+change
