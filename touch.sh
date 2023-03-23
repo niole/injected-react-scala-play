@@ -1,5 +1,6 @@
 #!/bin/bash
 
-mkdir data
-touch data/$RANDOM
-ls data
+echo running touch
+
+touch results/$RANDOM
+ls results
