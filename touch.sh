@@ -1,6 +1,9 @@
 #!/bin/bash
 
 echo running touch
+dir=/mnt/code/data
 
-touch /mnt/code/results/$RANDOM
-ls /mnt/code/results/
+mkdir $dir
+
+touch $dir/$RANDOM
+ls $dir
